@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Основная META -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Научно-технологическое развитие Российской Федерации</title>
+	<meta name="description" content="#">
+	<!-- Стили -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/chosen.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/bowser.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(event) {
+	        if (bowser.msie && bowser.version <= 9) {
+	            window.location = "/outdate.html";
+	        } else if (bowser.chrome && bowser.version <= 30) {
+	            window.location = "/outdate.html";
+	        } else if (bowser.ios && bowser.osversion <= 7){
+	        	window.location = "/outdate.html";
+	        }
+	    });
+	</script>
+	<!--[if IE]>
+		<style>
+			header.navigation .info .headline{
+				font-size: 15px;
+				padding-right:0px;
+			}
+		</style>
+	<![endif]-->
+</head>
+<body class="nav-bg">
+	<div class="container">
+		<header class="navigation">
+			<nav>
+				<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-print" aria-hidden="true"></i></a>
+				<a href="#" id="comment"><i class="fa fa-commenting-o" aria-hidden="true"></i></a>
+			</nav>
+			<div class="search">
+				<div class="input-group">
+					<input type="text" name="search" placeholder="поиск по сайту" class="form-control">
+					<div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+				</div>
+			</div>
+			<div class="info">
+					<div class="headline">
+						НАУЧНО-ТЕХНОЛОГИЧЕСКОЕ РАЗВИТИЕ<br>РОССИЙСКОЙ ФЕДЕРАЦИИ
+					</div>
+					<div class="bread">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+			</div>
+		</header>
+        <div class="indic-title">Индикаторы</div>
+		<main id="mainBlock">
+			<div class="small-ring" style="color: #99e9d0;">
+				<ul class="points" id="points" style="opacity: 0;">
+					<li class="first"><a href="#">1</a></li>
+					<li class="second"><a href="#">2</a></li>
+					<li class="third"><a href="#">3</a></li>
+					<li class="fourth"><a href="#">4</a></li>
+					<li class="five"><a href="#">5</a></li>
+					<li class="sex"><a href="#">6</a></li>
+					<li class="seven"><a href="#">7</a></li>
+				</ul>
+				<span class="headline" id="headline" style="opacity: 0;">Вызовы и<br /> приоритеты</span>
+				<span class="description" id="descr" style="opacity: 0;">
+                    Старение населения<br /> и новые болезни
+                    <strong>15б<em></em> 20в</strong>
+                    Персонализированная<br /> медицина
+                </span>
+			</div>
+			<div class="posts">
+                <div class="indic">
+                    <div class="indic-select">
+                        <select name="indic" data-placeholder="Выберите индикатор">
+                            <option value=""></option>
+                            <option value="1">индикатор 1</option>
+                            <option value="2">индикатор 2</option>
+                            <option value="3">индикатор 3</option>
+                        </select>
+                    </div>
+                    <div class="indic-subtitle">Доля высокотехнологичных товаров в общем объеме экспорта</div>
+                    <div class="donutchart-wrap">
+                        <div id="donutchart" class="donutchart"></div>
+                        <div class="donutchart-all">100%</div>
+                    </div>
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <script type="text/javascript">
+                        google.charts.load('current', {packages:['corechart']});
+                        google.charts.setOnLoadCallback(drawChart);
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Доля высокотехнологичных товаров в общем объеме экспорта', '%'],
+                                ['Товары группы 1', 65],
+                                ['Товары группы 2', 8],
+                                ['Товары группы 3', 7],
+                                ['Товары группы 4', 2],
+                                ['Товары группы 5', 12],
+                                ['Товары группы 6', 6]
+                            ]);
+
+                            var options = {
+                                pieHole: 0.5,
+                                backgroundColor: 'transparent',
+                                tooltip: { trigger: 'none' },
+                                legend: {
+                                    position: 'none'
+                                },
+                                fontSize: 25,
+                                fontName: 'Neue Helvetica',
+                                chartArea:{width:'90%',height:'90%'},
+                                colors: [
+                                    '#afd5c6',
+                                    '#75bb97',
+                                    '#7ca3d1',
+                                    '#607fbe',
+                                    '#93c7a5',
+                                    '#7da4d2'
+                                ]
+                            };
+
+                            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+                            chart.draw(data, options);
+                        }
+                    </script>
+                    <div class="donutchart-legend">
+                        <div class="donutchart-legend-item">
+                            <div class="donutchart-legend-item-val">65%</div>
+                            <div class="donutchart-legend-item-icon" style="background:#afd5c6"></div>
+                            <div class="donutchart-legend-item-title">Товары группы 1</div>
+                        </div>
+                        <div class="donutchart-legend-item">
+                            <div class="donutchart-legend-item-val">8%</div>
+                            <div class="donutchart-legend-item-icon" style="background:#75bb97"></div>
+                            <div class="donutchart-legend-item-title">Товары группы 2</div>
+                        </div>
+                        <div class="donutchart-legend-item">
+                            <div class="donutchart-legend-item-val">7%</div>
+                            <div class="donutchart-legend-item-icon" style="background:#7ca3d1"></div>
+                            <div class="donutchart-legend-item-title">Товары группы 3</div>
+                        </div>
+                        <div class="donutchart-legend-item">
+                            <div class="donutchart-legend-item-val">2%</div>
+                            <div class="donutchart-legend-item-icon" style="background:#607fbe"></div>
+                            <div class="donutchart-legend-item-title">Товары группы 4</div>
+                        </div>
+                        <div class="donutchart-legend-item">
+                            <div class="donutchart-legend-item-val">12%</div>
+                            <div class="donutchart-legend-item-icon" style="background:#93c7a5"></div>
+                            <div class="donutchart-legend-item-title">Товары группы 5</div>
+                        </div>
+                        <div class="donutchart-legend-item">
+                            <div class="donutchart-legend-item-val">6%</div>
+                            <div class="donutchart-legend-item-icon" style="background:#7da4d2"></div>
+                            <div class="donutchart-legend-item-title">Товары группы 6</div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+	</div>
+	<div class="popup" id="cmntpp">
+    <div class="container" id="popupcont">
+      <div class="header-modal">
+        <div class="heading">Комментарии <i class="fa fa-commenting-o" aria-hidden="true"></i></div>
+        <div class="close" id="closepopup"><i class="fa fa-times" aria-hidden="true" id="closeSide"></i></div>
+      </div>
+			<div class="under-header">
+				<div class="name-page">Заголовок раздела сайта</div>
+				<div class="counter">Всего комментариев: 11</div>
+			</div>
+      <div class="content-modal">
+      </div>
+    </div>
+  </div>
+	<footer>
+		<div class="container">
+			<span class="header">Информационные ресурсы</span>
+			<div class="btns">
+				<a href="http://www.rosrid.ru" target="_blank">ЕГИСУ НИОКТР www.rosrid.ru</a>
+				<a href="http://www.sciencemon.ru" target="_blank">ФСМНО www.sciencemon.ru</a>
+				<a href="http://www.ckp-rf.ru" target="_blank">Научная инфраструктура www.ckp-rf.ru</a>
+				<a href="http://Ученые-исследователи.рф" target="_blank">Ученые-исследователи.рф</a>
+			</div>
+			<div class="footer-menu">
+				<a href="#">О портале</a>
+				<a href="news.html">Новости</a>
+				<a href="sobit.html">События</a>
+				<a href="#">Документы</a>
+			</div>
+			<div class="footer-copyright">
+				<div class="left-col">
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+				</div>
+				<div class="right-col">
+					<span class="copyright">
+						&copy; 2017 Все права защищены
+					</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="sidebar">
+		<i class="fa fa-times closeSide" aria-hidden="true" id="closeSide"></i>
+		<div class="siebar-menu">
+			<a href="index.html" class="mainpage">Главная страница</a>
+			<a href="instiut.html">Институционная среда</a>
+			<a href="#">Вызовы и приоритеты</a>
+			<a href="#">Эффекты и показатели</a>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chosen.jquery.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
