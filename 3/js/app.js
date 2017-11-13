@@ -145,4 +145,5 @@ $(document).ready(function(e) {
     if ($('.indic-select select').length > 0) {
         $('.indic-select select').chosen({disable_search: true, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
     }
+    $(window).on('resize', drawChart);
 });

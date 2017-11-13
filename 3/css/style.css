@@ -744,6 +744,7 @@ main .posts .post .text .title{
 	box-shadow: -9px 9px 103px 10px rgba(0, 0, 0, 0.04);
     padding-top: 10px;
     padding-bottom:10px;
+    padding-right: 50px;
 }
 main .posts .post .text .summary{
 	display: block;
@@ -1439,7 +1440,7 @@ footer .footer-copyright .copyright{
 	    display: block;
 	    width: 50%;
 	    float: left;
-	    margin-bottom: 20px;
+	    margin-bottom: 0px;
 	}
 	header.navigation .search{
 		display: block;
@@ -1476,9 +1477,10 @@ footer .footer-copyright .copyright{
 	main .posts .post{
 		float: left;
 		width: 100%;
+        padding: 0 10px 0 15px;
 	}
 	main .posts .post .number{
-		left: -10px;
+		left: 5px;
 		width: 50px;
 		height: 50px;
 		line-height: 50px
@@ -1706,12 +1708,31 @@ footer .footer-copyright .copyright{
     height:400px;
 }
 
+@media (max-width: 1006px){
+    .donutchart {
+        width: 350px;
+        height:350px;
+        float: none;
+    }
+}
+
+@media (max-width: 479px){
+    .donutchart {
+        width: 300px;
+        height:300px;
+    }
+}
+
 .donutchart-legend {float: right; font-size:20px; color:#313131; line-height:24px}
 .donutchart-legend-item {margin:0 0 30px 0}
 .donutchart-legend-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .donutchart-legend-item-val {float:left; width:50px}
 .donutchart-legend-item-icon {float:left; width:15px; height:50px; margin:0 25px 0 0}
 .donutchart-legend-item-title {float:left}
+
+@media (max-width: 1006px){
+    .donutchart-legend {float:none}
+}
 
 .indic {
     margin-top: -319px;
@@ -1743,6 +1764,12 @@ footer .footer-copyright .copyright{
     }
 }
 
+@media (max-width: 1006px){
+    .indic {
+        padding:0 10px;
+    }
+}
+
 
 .indic-select {
     padding: 20px 0 0 0;
@@ -1757,4 +1784,9 @@ footer .footer-copyright .copyright{
 .indic-subtitle {padding:20px 0; color:#313131; opacity:.6; font-size:25px; font-weight:500}
 
 .donutchart-wrap {position:relative; float:left}
-.donutchart-all {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); font-size:40px; font-weight:500; color:#395764}
+.donutchart-all {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); font-size:35px; font-weight:500; color:#395764}
+
+header.navigation nav a {font-size: 25px;}
+header.navigation .info .headline {font-size: 12px;}
+header.navigation .info .bread .line{width: 23px; margin-bottom: 7px;}
+header.navigation.fixed{padding-bottom: 5px !important}
