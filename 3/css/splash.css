@@ -1,0 +1,30 @@
+html {min-width:480px; height:100%}
+
+body {min-width:480px; height:100%; margin:0; padding:0; font:26px/34px "Neue Helvetica", sans-serif; font-weight:300; text-transform:uppercase; color:#015265; background:#fff; -webkit-text-size-adjust:100%}
+
+.splash {background:url(../img/splash.jpg) no-repeat center; background-size:cover; padding:0 100px; min-height:100%}
+
+.splash-title {text-align:center; font-weight:400; font-size:60px; line-height:70px; color:#066; padding:50px 0 0 0}
+
+.splash-list {max-width:1400px; margin:0 auto; padding:0 0 50px 0}
+.splash-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.splash-list-inner {float:right; width:50%; padding:30px 0 0 0}
+.splash-item {position:relative; margin:45px 0 0 0}
+.splash-item:before {content:""; display:block; width:46px; height:46px; background:url(../img/splash-arrow.png); position:absolute; left:-79px; top:-3px}
+.splash-item strong {font-weight:400; font-size:30px}
+.splash-item a {color:#015265; text-decoration:none; outline:none}
+
+@media screen and (max-width:1440px) {
+    .splash {padding:0 30px}
+}
+
+@media screen and (max-width:1280px) {
+    .splash-title {font-size:50px; line-height:60px}
+}
+
+@media screen and (max-width:1024px) {
+    .splash {background:url(../img/splash-mobile.jpg) no-repeat center top; background-size:cover}
+    .splash-list-inner {width:auto; float:none}
+    .splash-item:before {display:none}
+    .splash-title {font-size:39px; line-height:46px; padding:100px 0 0 0}
+}
